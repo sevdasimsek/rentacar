@@ -1,0 +1,15 @@
+<h3>Marka Ekle</h3>
+<form [formGroup]="brandAddForm" (ngSubmit)="add()">
+  <div class="form-group">
+    <label for="brand">Marka Adı</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="name"
+      formControlName="name"
+      placeholder="Marka Adını Giriniz"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

@@ -1,0 +1,63 @@
+<h3>Araba Ekle</h3>
+<form [formGroup]="carAddForm" (ngSubmit)="add()">
+  <div class="form-group">
+    <label for="brand">Marka</label>
+    <select
+      class="form-control"
+      #brandId ="ngModel"
+      [(ngModel)]="car.brandId"
+      required
+      id="brandId"
+      name="name"
+      formControlName="name"
+      placeholder="Marka Seçiniz"
+    >
+      <option *ngFor="let brand of brands" [value]="brand.id"></option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="brand">Model</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="name"
+      formControlName="name"
+      placeholder="Model Giriniz"
+    />
+  </div>
+  <div class="form-group">
+    <label for="brand">Model</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="name"
+      formControlName="name"
+      placeholder="Marka Adını Giriniz"
+    />
+  </div>
+  <div class="form-group">
+    <label for="brand">Kiralama Durumu</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="name"
+      formControlName="name"
+      placeholder="Kiralama Durumu Giriniz"
+    />
+    <div class="form-group">
+      <label for="brand">Resim</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        formControlName="name"
+        placeholder="Resim Url'si Giriniz"
+      />
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
