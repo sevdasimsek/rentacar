@@ -11,7 +11,7 @@ import { CarGetModel } from 'src/app/Models/CarGetModel';
 })
 export class BrandsComponent implements OnInit {
   brands: BrandGetModel[] = [];
-  brandsName:string;
+  brandName:string;
   constructor(
     private brandsService: BrandsService,
   ) {}
@@ -24,7 +24,7 @@ export class BrandsComponent implements OnInit {
       this.brands = data;
     });
   }
-  selectBrand(data) {
-   this.brandsName=data;
+  selectBrand(brand:BrandGetModel) {
+   this.brandName=brand.name;
   }
 }
