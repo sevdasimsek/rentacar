@@ -1,0 +1,66 @@
+{
+  "Brands": [
+    {
+      "id": 1,
+      "name": "BMW"
+    },
+    {
+      "id": 2,
+      "name": "Renault"
+    },
+    {
+      "id": 3,
+      "name": "Dacia"
+    }
+  ],
+  "Cars": [
+    {
+      "id": 1,
+      "brandId": 3,
+      "description": "Duster Stepway",
+      "plate": "11 K 245",
+      "state": 1,
+      "imageUrl": "https://cdn.euroncap.com/media/62179/dacia-sandero-stepway.png"
+    },
+    {
+      "id": 2,
+      "brandId": 3,
+      "description": "Duster Stepway",
+      "plate": "11 D 256",
+      "state": 2,
+      "imageUrl": "https://cdn.euroncap.com/media/62179/dacia-sandero-stepway.png"
+    },
+    {
+      "id": 3,
+      "brandId": 1,
+      "description": "BMW 3 Sedan",
+      "plate": "11 S 193",
+      "state": 1,
+      "imageUrl": "https://cdn.euroncap.com/media/62179/dacia-sandero-stepway.png"
+    },
+    {
+      "id": 4,
+      "brandId": 1,
+      "description": "BMW 3 Sedan",
+      "plate": "11 D 193",
+      "state": 2,
+      "imageUrl": "https://cdn.euroncap.com/media/62179/dacia-sandero-stepway.png"
+    },
+    {
+      "id": 5,
+      "brandId": 2,
+      "description": "Clio",
+      "plate": "21 S 258",
+      "state": 1,
+      "imageUrl": "https://cdn.euroncap.com/media/62179/dacia-sandero-stepway.png"
+    },
+    {
+      "id": 6,
+      "brandId": 2,
+      "description": "Clio",
+      "plate": "21 d 258",
+      "state": 2,
+      "imageUrl": "https://cdn.euroncap.com/media/62179/dacia-sandero-stepway.png"
+    }
+  ]
+}
