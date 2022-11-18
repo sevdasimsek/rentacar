@@ -19,11 +19,11 @@ export class CarsService {
       'http://localhost:3000/cars' + '?brandId=' + brandId + '&state=1'
     );
   }
-
-  getCarsWithState(brandId, state): Observable<CarGetModel[]> {
-    //http://localhost:3000/cars  ?brandId=2            &state=1
-    return this.httpClient.get<CarGetModel[]>(
-      'http://localhost:3000/cars' + '?brandId=' + brandId + '&state=' + state
-    );
-  }
+  ////İki parametre Alınır ise
+  // getCarsWithState(brandId, state): Observable<CarGetModel[]> {
+  //   //http://localhost:3000/cars  ?brandId=2            &state=1
+  //   return this.httpClient.get<CarGetModel[]>(
+  //     'http://localhost:3000/cars' + '?brandId=' + brandId + '&state=' + state
+  //   );
+  // }
 }
