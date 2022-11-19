@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-car-add',
   templateUrl: './car-add.component.html',
   styleUrls: ['./car-add.component.css'],
-  providers:[BrandsService]
+  providers: [BrandsService],
 })
 export class CarAddComponent implements OnInit {
   constructor(
@@ -17,12 +17,15 @@ export class CarAddComponent implements OnInit {
     private carsService: CarsService,
     private brandsService: BrandsService
   ) {}
+
   carAddForm: FormGroup;
   car: CarGetModel[];
   brands: BrandGetModel[];
-  createBrandAddForm() {
+
+  createCarAddForm() {
     this.carAddForm = this.formBuilder.group({
-      brandId: ['', Validators.required],
+      //fonksiyon
+      brandId: ['', Validators.required], //''default update de dolduruyoruz
       name: ['', Validators.required],
       description: ['', Validators.required],
       plate: ['', Validators.required],
@@ -30,8 +33,9 @@ export class CarAddComponent implements OnInit {
       imageUrl: ['', Validators.required],
     });
   }
+
   ngOnInit(): void {
-    this.createBrandAddForm();
+    this.createCarAddForm();
     this.brandsService.getBrand().subscribe((data) => {
       this.brands = data;
     });
@@ -41,6 +45,9 @@ export class CarAddComponent implements OnInit {
     if (this.carAddForm.valid) {
       this.car = Object.assign({}, this.carAddForm.value);
     }
-    this.carsService.addCar(this.car).subscribe((data) => (this.car = data));
+
+    this.carsService.addCar(this.carAddForm.value).subscribe((response) => {
+      this.car = response;
+    });
   }
 }

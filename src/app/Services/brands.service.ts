@@ -8,7 +8,9 @@ import { Observable } from 'rxjs';
 })
 export class BrandsService {
   constructor(private httpClient: HttpClient) {}
+
   apiUrl:string='http://localhost:3000/Brands';
+  
   getBrand(): Observable<BrandGetModel[]> {
     return this.httpClient.get<BrandGetModel[]>(
       this.apiUrl

@@ -2,7 +2,6 @@ import { CarsService } from './../../Services/cars.service';
 import { BrandsService } from './../../Services/brands.service';
 import { Component, OnInit } from '@angular/core';
 import { BrandGetModel } from 'src/app/Models/BrandGetModel';
-import { CarGetModel } from 'src/app/Models/CarGetModel';
 
 @Component({
   selector: 'app-brands',

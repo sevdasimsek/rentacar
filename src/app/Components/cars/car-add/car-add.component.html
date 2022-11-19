@@ -1,22 +1,23 @@
 <h3>Araba Ekle</h3>
 <form [formGroup]="carAddForm" (ngSubmit)="add()">
   <div class="form-group">
-    <label for="brand">Marka</label>
+    <label for="brandId">Marka</label>
     <select
       class="form-control"
-      #brandId ="ngModel"
-      [(ngModel)]="car.brandId"
+      formControlName="brandId"
       required
       id="brandId"
-      name="name"
-      formControlName="name"
+      name="brandId"
+      formControlName="brandId"
       placeholder="Marka Seçiniz"
     >
-      <option *ngFor="let brand of brands" [value]="brand.id"></option>
+      <option *ngFor="let brand of brands" [value]="brand.id">
+        {{ brand.name }}
+      </option>
     </select>
   </div>
   <div class="form-group">
-    <label for="brand">Model</label>
+    <label for="name">Model</label>
     <input
       type="text"
       class="form-control"
@@ -27,37 +28,37 @@
     />
   </div>
   <div class="form-group">
-    <label for="brand">Model</label>
+    <label for="plate">Plaka</label>
     <input
       type="text"
       class="form-control"
-      id="name"
-      name="name"
-      formControlName="name"
-      placeholder="Marka Adını Giriniz"
-    />
+      id="plate"
+      name="plate"
+      formControlName="plate"
+      placeholder="Plaka Giriniz"
+    />  
   </div>
   <div class="form-group">
-    <label for="brand">Kiralama Durumu</label>
+    <label for="state">Kiralama Durumu</label>
     <input
       type="text"
       class="form-control"
-      id="name"
-      name="name"
-      formControlName="name"
+      id="state"
+      name="state"
+      formControlName="state"
       placeholder="Kiralama Durumu Giriniz"
     />
     <div class="form-group">
-      <label for="brand">Resim</label>
+      <label for="imageUrl">Resim</label>
       <input
         type="text"
         class="form-control"
-        id="name"
-        name="name"
-        formControlName="name"
+        id="imageUrl"
+        name="imageUrl"
+        formControlName="imageUrl"
         placeholder="Resim Url'si Giriniz"
       />
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Kaydet</button>
+  <button type="submit" class="btn btn-primary" (click)="add()">Kaydet</button>
 </form>

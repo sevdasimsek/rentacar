@@ -8,13 +8,14 @@ import { Injectable } from '@angular/core';
 })
 export class CarsService {
   constructor(private httpClient: HttpClient) {}
+
   apiUrl: string = 'http://localhost:3000/cars';
+
   getAllCars(): Observable<CarGetModel[]> {
-    return this.httpClient.get<CarGetModel[]>(this.apiUrl + 'state=1');
+    return this.httpClient.get<CarGetModel[]>(this.apiUrl + '?state=1');
   }
 
   getCars(brandId): Observable<CarGetModel[]> {
-    //http://localhost:3000/cars  ?brandId=2            &state=1
     return this.httpClient.get<CarGetModel[]>(
       this.apiUrl + '?brandId=' + brandId + '&state=1'
     );
