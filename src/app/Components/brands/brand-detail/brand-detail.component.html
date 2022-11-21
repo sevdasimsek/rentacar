@@ -1,1 +1,17 @@
-<p>brand-detail works!</p>
+<form
+  [formGroup]="brandUpdateForm"
+  (ngSubmit)="update()"
+  *ngIf="brandUpdateForm"
+>
+  <div class="form-group">
+    <label for="modelName">Model</label>
+    <input
+      type="text"
+      class="form-control"
+      id="modelName"
+      formControlName="name"
+      placeholder="Enter Model"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
