@@ -22,7 +22,6 @@ export class CarDetailComponent implements OnInit {
   carUpdateForm: FormGroup;
   brands: BrandGetModel[];
   car: CarGetModel;
-  cars: CarGetModel[];
   ngOnInit(): void {
     this.getBrands();
   }
