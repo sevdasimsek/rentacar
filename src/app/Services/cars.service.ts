@@ -17,19 +17,19 @@ export class CarsService {
 
   getCars(brandId): Observable<CarGetModel[]> {
     return this.httpClient.get<CarGetModel[]>(
-      this.apiUrl + '?brandId=' + brandId + '&state=1'
+      this.apiUrl + '?brandId=' + brandId + '&?state=1'
     );
   }
   getCarById(id): Observable<CarGetModel> {
     return this.httpClient.get<CarGetModel>(this.apiUrl + '/' + id);
   }
-  addCar(car): Observable<CarGetModel[]> {
-    return this.httpClient.post<CarGetModel[]>(this.apiUrl, car);
+  addCar(car) {
+    return this.httpClient.post(this.apiUrl, car);
   }
-  updateCar(id, car): Observable<CarGetModel[]> {
-    return this.httpClient.put<CarGetModel[]>(this.apiUrl + '/' + id, car);
+  updateCar(id, car)  {
+    return this.httpClient.put(this.apiUrl + '/' + id, car);
   }
-  deleteCar(id): Observable<CarGetModel[]> {
-    return this.httpClient.delete<CarGetModel[]>(this.apiUrl + '/' + id);
+  deleteCar(id) {
+    return this.httpClient.delete(this.apiUrl + '/' + id);
   }
 }

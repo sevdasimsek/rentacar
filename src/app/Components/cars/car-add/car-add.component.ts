@@ -40,11 +40,6 @@ export class CarAddComponent implements OnInit {
     });
   }
   add() {
-    if (this.carAddForm.valid) {
-      this.car = Object.assign({}, this.carAddForm.value);
-    }
-    this.carsService.addCar(this.carAddForm.value).subscribe((response) => {
-      this.car = response;
-    });
+    this.carsService.addCar(this.carAddForm.value).subscribe((response) => {});
   }
 }
