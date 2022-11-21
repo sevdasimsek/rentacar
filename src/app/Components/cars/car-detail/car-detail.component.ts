@@ -25,15 +25,15 @@ export class CarDetailComponent implements OnInit {
   ngOnInit(): void {
     this.getBrands();
   }
-  getCarById() {
-    this.activatedRoute.params.subscribe((params) => {
-      this.getCar(params['id']);
-    });
-  }
   getBrands() {
     this.brandsService.getBrands().subscribe((data) => {
       this.brands = data;
       this.getCarById();
+    });
+  }
+  getCarById() {
+    this.activatedRoute.params.subscribe((params) => {
+      this.getCar(params['id']);
     });
   }
 
@@ -60,16 +60,13 @@ export class CarDetailComponent implements OnInit {
         this.activatedRoute.snapshot.params['id'],
         this.carUpdateForm.value
       )
-      .subscribe((response) => {
-        
-      });
+      .subscribe((response) => {});
   }
   deleteCar() {
     {
-      this.carsService  
+      this.carsService
         .deleteCar(this.activatedRoute.snapshot.params['id'])
-        .subscribe((response) => {
-        });
+        .subscribe((response) => {});
     }
   }
 }

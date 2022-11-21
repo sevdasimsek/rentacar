@@ -10,6 +10,7 @@ import { CarAddComponent } from './Components/cars/car-add/car-add.component';
 import { BrandAddComponent } from './Components/brands/brand-add/brand-add.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarDetailComponent } from './Components/cars/car-detail/car-detail.component';
+import { BrandDetailComponent } from './Components/brands/brand-detail/brand-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CarDetailComponent } from './Components/cars/car-detail/car-detail.comp
     CarAddComponent,
     BrandAddComponent,
     CarDetailComponent,
+    BrandDetailComponent,
   ],
   imports: [
     BrowserModule,

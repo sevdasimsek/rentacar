@@ -1,6 +1,5 @@
 <h3>Car</h3>
-<div *ngIf="car">
-  <form [formGroup]="carUpdateForm">
+  <form [formGroup]="carUpdateForm" *ngIf="carUpdateForm">
     <div class="form-group">
       <label for="brandId">Brand</label>
       <select
@@ -82,4 +81,3 @@
       Delete
     </button>
   </form>
-</div>
