@@ -1,9 +1,10 @@
 <h3>Car</h3>
 <div *ngIf="car">
- <form [formGroup]="carUpdateForm">
+  <form [formGroup]="carUpdateForm">
     <div class="form-group">
       <label for="brandId">Brand</label>
-      <select *ngIf="brands"
+      <select
+        *ngIf="brands"
         class="form-control"
         id="brandId"
         formControlName="brandId"
@@ -60,7 +61,7 @@
         type="text"
         class="form-control"
         id="price"
-        formControlName="price" 
+        formControlName="price"
         placeholder="Enter Day Price"
       />
     </div>
@@ -74,10 +75,11 @@
         placeholder="Enter Image Url "
       />
     </div>
-    <button type="submit" class="btn btn-primary">Update</button>
-    <button type="submit" class="btn btn-primary">Delete</button>
+    <button type="submit" class="btn btn-primary" (click)="updateCar()">
+      Update
+    </button>
+    <button type="submit" class="btn btn-primary" (click)="deleteCar()">
+      Delete
+    </button>
   </form>
 </div>
- 
-
-

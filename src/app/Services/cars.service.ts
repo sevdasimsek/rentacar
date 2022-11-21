@@ -26,14 +26,10 @@ export class CarsService {
   addCar(car): Observable<CarGetModel[]> {
     return this.httpClient.post<CarGetModel[]>(this.apiUrl, car);
   }
-  updateCar(car): Observable<CarGetModel[]> {
-    return this.httpClient.patch<CarGetModel[]>(this.apiUrl, car);
+  updateCar(id, car): Observable<CarGetModel[]> {
+    return this.httpClient.put<CarGetModel[]>(this.apiUrl + '/' + id, car);
   }
-  ////İki parametre Alınır ise
-  // getCarsWithState(brandId, state): Observable<CarGetModel[]> {
-  //   //http://localhost:3000/cars  ?brandId=2            &state=1
-  //   return this.httpClient.get<CarGetModel[]>(
-  //     'http://localhost:3000/cars' + '?brandId=' + brandId + '&state=' + state
-  //   );
-  // }
+  deleteCar(id): Observable<CarGetModel[]> {
+    return this.httpClient.delete<CarGetModel[]>(this.apiUrl + '/' + id);
+  }
 }

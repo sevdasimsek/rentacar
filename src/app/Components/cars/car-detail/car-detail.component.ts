@@ -22,7 +22,7 @@ export class CarDetailComponent implements OnInit {
   carUpdateForm: FormGroup;
   brands: BrandGetModel[];
   car: CarGetModel;
-  cars:CarGetModel[];
+  cars: CarGetModel[];
   ngOnInit(): void {
     this.getBrands();
   }
@@ -55,12 +55,25 @@ export class CarDetailComponent implements OnInit {
       imageUrl: [this.car.imageUrl, Validators.required],
     });
   }
-  add() {
-    if (this.carUpdateForm.valid) {
-      this.car = Object.assign({}, this.carUpdateForm.value);
+  updateCar() {
+    this.carsService
+      .updateCar(
+        this.activatedRoute.snapshot.params['id'],
+        this.carUpdateForm.value
+      )
+      .subscribe((response) => {
+        this.cars = response;
+      });
+  }
+  deleteCar() {
+    {
+      this.carsService
+        .deleteCar(
+          this.activatedRoute.snapshot.params['id']
+        )
+        .subscribe((response) => {
+          this.cars = response;
+        });
     }
-    this.carsService.updateCar(this.carUpdateForm.value).subscribe((response) => {
-      this.cars = response;
-    });
   }
 }
