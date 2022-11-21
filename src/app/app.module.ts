@@ -9,6 +9,7 @@ import { NaviComponent } from './layouts/navi/navi.component';
 import { CarAddComponent } from './Components/cars/car-add/car-add.component';
 import { BrandAddComponent } from './Components/brands/brand-add/brand-add.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CarDetailComponent } from './Components/cars/car-detail/car-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NaviComponent,
     CarAddComponent,
     BrandAddComponent,
+    CarDetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

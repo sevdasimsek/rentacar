@@ -20,8 +20,14 @@ export class CarsService {
       this.apiUrl + '?brandId=' + brandId + '&state=1'
     );
   }
+  getCarById(id): Observable<CarGetModel> {
+    return this.httpClient.get<CarGetModel>(this.apiUrl + '/' + id);
+  }
   addCar(car): Observable<CarGetModel[]> {
     return this.httpClient.post<CarGetModel[]>(this.apiUrl, car);
+  }
+  updateCar(car): Observable<CarGetModel[]> {
+    return this.httpClient.patch<CarGetModel[]>(this.apiUrl, car);
   }
   ////İki parametre Alınır ise
   // getCarsWithState(brandId, state): Observable<CarGetModel[]> {

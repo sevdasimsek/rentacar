@@ -1,0 +1,66 @@
+import { CarGetModel } from './../../../Models/CarGetModel';
+import { ActivatedRoute } from '@angular/router';
+import { BrandGetModel } from './../../../Models/BrandGetModel';
+import { CarsService } from './../../../Services/cars.service';
+import { BrandsService } from './../../../Services/brands.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-car-detail',
+  templateUrl: './car-detail.component.html',
+  styleUrls: ['./car-detail.component.css'],
+})
+export class CarDetailComponent implements OnInit {
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private formBuilder: FormBuilder,
+    private brandsService: BrandsService,
+    private carsService: CarsService
+  ) {}
+
+  carUpdateForm: FormGroup;
+  brands: BrandGetModel[];
+  car: CarGetModel;
+  cars:CarGetModel[];
+  ngOnInit(): void {
+    this.getBrands();
+  }
+  getCarById() {
+    this.activatedRoute.params.subscribe((params) => {
+      this.getCar(params['id']);
+    });
+  }
+  getBrands() {
+    this.brandsService.getBrand().subscribe((data) => {
+      this.brands = data;
+      this.getCarById();
+    });
+  }
+
+  getCar(id) {
+    this.carsService.getCarById(id).subscribe((data) => {
+      this.car = data;
+      this.createCarFrom();
+    });
+  }
+  createCarFrom() {
+    this.carUpdateForm = this.formBuilder.group({
+      brandId: [this.car.brandId, Validators.required],
+      modelName: [this.car.modelName, Validators.required],
+      description: [this.car.description, Validators.required],
+      plate: [this.car.plate, Validators.required],
+      state: [this.car.state, Validators.required],
+      price: [this.car.price, Validators.required],
+      imageUrl: [this.car.imageUrl, Validators.required],
+    });
+  }
+  add() {
+    if (this.carUpdateForm.valid) {
+      this.car = Object.assign({}, this.carUpdateForm.value);
+    }
+    this.carsService.updateCar(this.carUpdateForm.value).subscribe((response) => {
+      this.cars = response;
+    });
+  }
+}

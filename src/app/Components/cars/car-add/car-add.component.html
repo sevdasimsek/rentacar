@@ -1,15 +1,12 @@
-<h3>Araba Ekle</h3>
+<h3>Add Car</h3>
 <form [formGroup]="carAddForm" (ngSubmit)="add()">
   <div class="form-group">
-    <label for="brandId">Marka</label>
+    <label for="brandId">Brand</label>
     <select
       class="form-control"
-      formControlName="brandId"
-      required
       id="brandId"
-      name="brandId"
       formControlName="brandId"
-      placeholder="Marka Seçiniz"
+      placeholder="Choose Brand"
     >
       <option *ngFor="let brand of brands" [value]="brand.id">
         {{ brand.name }}
@@ -17,48 +14,65 @@
     </select>
   </div>
   <div class="form-group">
-    <label for="name">Model</label>
+    <label for="modelName">Model</label>
     <input
       type="text"
       class="form-control"
-      id="name"
-      name="name"
-      formControlName="name"
-      placeholder="Model Giriniz"
+      id="modelName"
+      formControlName="modelName"
+      placeholder="Enter Model"
+    />
+    
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input
+      type="text"
+      class="form-control"
+      id="description"
+      formControlName="description"
+      placeholder="Enter Description"
     />
   </div>
   <div class="form-group">
-    <label for="plate">Plaka</label>
+    <label for="plate">Plate</label>
     <input
       type="text"
       class="form-control"
       id="plate"
-      name="plate"
       formControlName="plate"
-      placeholder="Plaka Giriniz"
-    />  
+      placeholder="Enter Plate"
+    />
   </div>
   <div class="form-group">
-    <label for="state">Kiralama Durumu</label>
+    <label for="state">Rental Status</label>
     <input
       type="text"
       class="form-control"
       id="state"
-      name="state"
       formControlName="state"
-      placeholder="Kiralama Durumu Giriniz"
+      placeholder="Enter Rental Status"
     />
-    <div class="form-group">
-      <label for="imageUrl">Resim</label>
-      <input
-        type="text"
-        class="form-control"
-        id="imageUrl"
-        name="imageUrl"
-        formControlName="imageUrl"
-        placeholder="Resim Url'si Giriniz"
-      />
-    </div>
   </div>
-  <button type="submit" class="btn btn-primary" (click)="add()">Kaydet</button>
+  <div class="form-group">
+    <label for="price">Day Price</label>
+    <input
+      type="text"
+      class="form-control"
+      id="price"
+      formControlName="price"
+      placeholder="Enter Day Price"
+    />
+  </div>
+  <div class="form-group">
+    <label for="imageUrl">Image</label>
+    <input
+      type="text"
+      class="form-control"
+      id="imageUrl"
+      formControlName="imageUrl"
+      placeholder="Enter Image Url "
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
 </form>

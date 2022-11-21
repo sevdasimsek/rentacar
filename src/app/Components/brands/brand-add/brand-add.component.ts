@@ -16,14 +16,14 @@ export class BrandAddComponent implements OnInit {
 
   brandAddForm: FormGroup;
   brand: BrandGetModel[];
+
+  ngOnInit(): void {
+    this.createBrandAddForm();
+  }
   createBrandAddForm() {
     this.brandAddForm = this.formBuilder.group({
       name: ['', Validators.required],
     });
-  }
-
-  ngOnInit(): void {
-    this.createBrandAddForm();
   }
   add() {
     if (this.brandAddForm.valid) {
