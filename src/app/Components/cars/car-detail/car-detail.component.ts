@@ -68,9 +68,7 @@ export class CarDetailComponent implements OnInit {
   deleteCar() {
     {
       this.carsService
-        .deleteCar(
-          this.activatedRoute.snapshot.params['id']
-        )
+        .deleteCar(this.activatedRoute.snapshot.params['id'])
         .subscribe((response) => {
           this.cars = response;
         });

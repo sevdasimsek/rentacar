@@ -11,56 +11,76 @@
     {
       "id": 3,
       "name": "Dacia"
+    },
+    {
+      "name": "Chevrolet",
+      "id": 4
+    },
+    {
+      "name": "Honda",
+      "id": 5
     }
   ],
   "Cars": [
     {
-      "id": 1,
-      "brandId": 3,
-      "description": "Duster Stepway",
-      "plate": "11 K 245",
-      "state": 1,
-      "imageUrl": "https://cdn.euroncap.com/media/62179/dacia-sandero-stepway.png"
+      "brandId": "4",
+      "modelName": "Corvette Coupe",
+      "description": "En İyisi",
+      "plate": "11 S 258",
+      "state": "1",
+      "price": "10000",
+      "imageUrl": "https://cgi.chevrolet.com/mmgprod-us/dynres/prove/image.gen?i=2023/1YC07/1YC07__3LT/GKZ_LT2_M1L_Q8P_XFN_GKZ_AH2_HTE_IOT_719gmds10.jpg&v=deg01&std=true&country=US&removeCat=&background=FFFFFF",
+      "id": 1
     },
     {
-      "id": 2,
-      "brandId": 3,
-      "description": "Duster Stepway",
-      "plate": "11 D 256",
-      "state": 2,
-      "imageUrl": "https://cdn.euroncap.com/media/62179/dacia-sandero-stepway.png"
+      "brandId": "1",
+      "modelName": "İ8",
+      "description": "Güzel Araba",
+      "plate": "11 S 258",
+      "state": "1",
+      "price": "10000",
+      "imageUrl": "https://cdn.motor1.com/images/mgl/vEJmQ/s1/bmw-i8-m-rendering.jpg",
+      "id": 3
     },
     {
-      "id": 3,
-      "brandId": 1,
-      "description": "BMW 3 Sedan",
-      "plate": "11 S 193",
-      "state": 1,
-      "imageUrl": "https://cdn.euroncap.com/media/62179/dacia-sandero-stepway.png"
+      "brandId": "1",
+      "modelName": "İ8",
+      "description": "Girdim Hocam",
+      "plate": "11 S 258",
+      "state": "2",
+      "price": "10000",
+      "imageUrl": "https://cdn.motor1.com/images/mgl/vEJmQ/s1/bmw-i8-m-rendering.jpg",
+      "id": 4
     },
     {
-      "id": 4,
-      "brandId": 1,
-      "description": "BMW 3 Sedan",
-      "plate": "11 D 193",
-      "state": 2,
-      "imageUrl": "https://cdn.euroncap.com/media/62179/dacia-sandero-stepway.png"
+      "brandId": "2",
+      "modelName": "Clio İcon",
+      "description": "Rahat Araba",
+      "plate": "11 S 258",
+      "state": "1",
+      "price": "10000",
+      "imageUrl": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/clio/bja-clio/hero-zone/2560x1200-desktop/renault-clio5-ph1-hero-zone-desktop-001.jpg.ximg.mediumx2.webp/60ffeb6378.webp",
+      "id": 5
     },
     {
-      "id": 5,
-      "brandId": 2,
-      "description": "Clio",
-      "plate": "21 S 258",
-      "state": 1,
-      "imageUrl": "https://cdn.euroncap.com/media/62179/dacia-sandero-stepway.png"
+      "brandId": "3",
+      "modelName": "Duster Stepway",
+      "description": "Çok Hoştur",
+      "plate": "11 S 258",
+      "state": "1",
+      "price": "10000",
+      "imageUrl": "https://cdn.group.renault.com/dac/tr/dacia-new-cars/product-plans/obi-models-assets%C2%A0/bji-sandero-stepway/sandero-stepway-bji-ph1/hero-zones/dacia-sandero-stepway-bji-ph1-hero-zone-001.jpg.ximg.mediumx2.webp/8b8795ceee.webp",
+      "id": 6
     },
     {
-      "id": 6,
-      "brandId": 2,
-      "description": "Clio",
-      "plate": "21 d 258",
-      "state": 2,
-      "imageUrl": "https://cdn.euroncap.com/media/62179/dacia-sandero-stepway.png"
+      "brandId": "5",
+      "modelName": "İX",
+      "description": "fgfgdfg",
+      "plate": "fggfg",
+      "state": "1",
+      "price": "10000",
+      "imageUrl": "https://cdn.motor1.com/images/mgl/vEJmQ/s1/bmw-i8-m-rendering.jpg",
+      "id": 7
     }
   ]
 }
