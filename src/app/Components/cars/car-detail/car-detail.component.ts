@@ -62,7 +62,7 @@ export class CarDetailComponent implements OnInit {
         this.carUpdateForm.value
       )
       .subscribe((response) => {
-        this.cars = response;
+        
       });
   }
   deleteCar() {
@@ -70,7 +70,7 @@ export class CarDetailComponent implements OnInit {
       this.carsService
         .deleteCar(this.activatedRoute.snapshot.params['id'])
         .subscribe((response) => {
-          this.cars = response;
+         
         });
     }
   }
