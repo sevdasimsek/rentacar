@@ -22,7 +22,7 @@ export class CarAddComponent implements OnInit {
   brands: BrandGetModel[];
 
   ngOnInit(): void {
-    this.brandsService.getBrand().subscribe((data) => {
+    this.brandsService.getBrands().subscribe((data) => {
       this.brands = data;
     });
     this.createCarAddForm();

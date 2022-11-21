@@ -31,7 +31,7 @@ export class CarDetailComponent implements OnInit {
     });
   }
   getBrands() {
-    this.brandsService.getBrand().subscribe((data) => {
+    this.brandsService.getBrands().subscribe((data) => {
       this.brands = data;
       this.getCarById();
     });

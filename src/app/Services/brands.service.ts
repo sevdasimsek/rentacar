@@ -11,7 +11,7 @@ export class BrandsService {
 
   apiUrl:string='http://localhost:3000/Brands';
   
-  getBrand(): Observable<BrandGetModel[]> {
+  getBrands(): Observable<BrandGetModel[]> {
     return this.httpClient.get<BrandGetModel[]>(
       this.apiUrl
     );
