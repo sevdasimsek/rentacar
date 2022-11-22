@@ -23,7 +23,4 @@ export class BrandsComponent implements OnInit {
       this.brands = data;
     });
   }
-  selectBrand(brand: BrandGetModel) {
-    this.brandName = brand.name;
-  }
 }

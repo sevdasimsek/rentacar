@@ -11,8 +11,7 @@
         <li
           class="list-group-item"
           *ngFor="let brand of brands | brand: filterText"
-          (click)="selectBrand(brand)"
-          routerLink="/brand/{{ brand.id }}"
+          routerLink="/cars/{{ brand.id }}"
         >
           {{ brand.name }}
         </li>
@@ -20,4 +19,3 @@
     </div>
   </div>
 </div>
-<h5 *ngIf="brandName">{{ brandName }}</h5>

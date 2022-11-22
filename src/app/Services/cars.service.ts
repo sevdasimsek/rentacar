@@ -17,7 +17,7 @@ export class CarsService {
 
   getCars(brandId): Observable<CarGetModel[]> {
     return this.httpClient.get<CarGetModel[]>(
-      this.apiUrl + '?brandId=' + brandId + '&state=2' +''
+      this.apiUrl + '?brandId=' + brandId + '&state=1'
     );
   }
   getCarById(id): Observable<CarGetModel> {
@@ -26,7 +26,7 @@ export class CarsService {
   addCar(car) {
     return this.httpClient.post(this.apiUrl, car);
   }
-  updateCar(id, car)  {
+  updateCar(id, car) {
     return this.httpClient.put(this.apiUrl + '/' + id, car);
   }
   deleteCar(id) {
