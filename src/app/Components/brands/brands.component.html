@@ -2,11 +2,22 @@
   <div class="row">
     <div class="col-12">
       <ul class="list-group">
-        <li class="list-group-item" *ngFor="let brand of brands" (click)="selectBrand(brand)" routerLink="/brand/{{brand.id}}">
+        <input
+          type="text"
+          class="form-control"
+          id="filter"
+          [(ngModel)]="filterText"
+        />
+        <li
+          class="list-group-item"
+          *ngFor="let brand of brands | brand: filterText"
+          (click)="selectBrand(brand)"
+          routerLink="/brand/{{ brand.id }}"
+        >
           {{ brand.name }}
         </li>
       </ul>
     </div>
   </div>
 </div>
-<h5 *ngIf="brandName">{{brandName}}</h5>
+<h5 *ngIf="brandName">{{ brandName }}</h5>

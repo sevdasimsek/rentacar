@@ -1,83 +1,93 @@
 <h3>Car</h3>
-  <form [formGroup]="carUpdateForm" *ngIf="carUpdateForm">
-    <div class="form-group">
-      <label for="brandId">Brand</label>
-      <select
-        *ngIf="brands"
-        class="form-control"
-        id="brandId"
-        formControlName="brandId"
-        placeholder="Choose Brand"
-      >
-        <option *ngFor="let brand of brands" [value]="brand.id">
-          {{ brand.name }}
-        </option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="modelName">Model</label>
-      <input
-        type="text"
-        class="form-control"
-        id="modelName"
-        formControlName="modelName"
-        placeholder="Enter Model"
-      />
-    </div>
-    <div class="form-group">
-      <label for="description">Description</label>
-      <input
-        type="text"
-        class="form-control"
-        id="description"
-        formControlName="description"
-        placeholder="Enter Description"
-      />
-    </div>
-    <div class="form-group">
-      <label for="plate">Plate</label>
-      <input
-        type="text"
-        class="form-control"
-        id="plate"
-        formControlName="plate"
-        placeholder="Enter Plate"
-      />
-    </div>
-    <div class="form-group">
-      <label for="state">Rental Status</label>
-      <input
-        type="text"
-        class="form-control"
-        id="state"
-        formControlName="state"
-        placeholder="Enter Rental Status"
-      />
-    </div>
-    <div class="form-group">
-      <label for="price">Day Price</label>
-      <input
-        type="text"
-        class="form-control"
-        id="price"
-        formControlName="price"
-        placeholder="Enter Day Price"
-      />
-    </div>
-    <div class="form-group">
-      <label for="imageUrl">Image</label>
-      <input
-        type="text"
-        class="form-control"
-        id="imageUrl"
-        formControlName="imageUrl"
-        placeholder="Enter Image Url "
-      />
-    </div>
-    <button type="submit" class="btn btn-primary" (click)="updateCar()">
-      Update
-    </button>
-    <button type="submit" class="btn btn-primary" (click)="deleteCar()">
-      Delete
-    </button>
-  </form>
+<form [formGroup]="carUpdateForm" *ngIf="carUpdateForm">
+  <div class="form-group">
+    <label for="brandId">Brand</label>
+    <select
+      *ngIf="brands"
+      class="form-control"
+      id="brandId"
+      formControlName="brandId"
+      placeholder="Choose Brand"
+    >
+      <option *ngFor="let brand of brands" [value]="brand.id">
+        {{ brand.name }}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="modelName">Model</label>
+    <input
+      type="text"
+      class="form-control"
+      id="modelName"
+      formControlName="modelName"
+      placeholder="Enter Model"
+    />
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input
+      type="text"
+      class="form-control"
+      id="description"
+      formControlName="description"
+      placeholder="Enter Description"
+    />
+  </div>
+  <div class="form-group">
+    <label for="description">Car Color</label>
+    <input
+      type="text"
+      class="form-control"
+      id="description"
+      formControlName="color"
+      placeholder="Enter Description"
+    />
+  </div>
+  <div class="form-group">
+    <label for="plate">Plate</label>
+    <input
+      type="text"
+      class="form-control"
+      id="plate"
+      formControlName="plate"
+      placeholder="Enter Plate"
+    />
+  </div>
+  <div class="form-group">
+    <label for="state">Rental Status</label>
+    <input
+      type="text"
+      class="form-control"
+      id="state"
+      formControlName="state"
+      placeholder="Enter Rental Status"
+    />
+  </div>
+  <div class="form-group">
+    <label for="price">Day Price</label>
+    <input
+      type="text"
+      class="form-control"
+      id="price"
+      formControlName="price"
+      placeholder="Enter Day Price"
+    />
+  </div>
+  <div class="form-group">
+    <label for="imageUrl">Image</label>
+    <input
+      type="text"
+      class="form-control"
+      id="imageUrl"
+      formControlName="imageUrl"
+      placeholder="Enter Image Url "
+    />
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="updateCar()">
+    Update
+  </button>
+  <button type="submit" class="btn btn-primary" (click)="deleteCar()">
+    Delete
+  </button>
+</form>

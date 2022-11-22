@@ -33,6 +33,7 @@ export class CarAddComponent implements OnInit {
       brandId: ['', Validators.required], //''default update de dolduruyoruz
       modelName: ['', Validators.required],
       description: ['', Validators.required],
+      color: ['', Validators.required],
       plate: ['', Validators.required],
       state: ['', Validators.required],
       price: ['', Validators.required],

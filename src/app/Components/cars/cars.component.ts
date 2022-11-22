@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CarsComponent implements OnInit {
   cars: CarGetModel[] = [];
+  filterText:string;
   constructor(
     private activatedRoute: ActivatedRoute,
     private carsService: CarsService

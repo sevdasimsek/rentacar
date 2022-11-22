@@ -48,6 +48,7 @@ export class CarDetailComponent implements OnInit {
       brandId: [this.car.brandId, Validators.required],
       modelName: [this.car.modelName, Validators.required],
       description: [this.car.description, Validators.required],
+      color: [this.car.color, Validators.required],
       plate: [this.car.plate, Validators.required],
       state: [this.car.state, Validators.required],
       price: [this.car.price, Validators.required],
@@ -63,10 +64,9 @@ export class CarDetailComponent implements OnInit {
       .subscribe((response) => {});
   }
   deleteCar() {
-    {
       this.carsService
         .deleteCar(this.activatedRoute.snapshot.params['id'])
         .subscribe((response) => {});
-    }
+
   }
 }

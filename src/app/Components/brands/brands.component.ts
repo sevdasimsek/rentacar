@@ -1,3 +1,4 @@
+import { filter } from 'rxjs';
 import { CarsService } from './../../Services/cars.service';
 import { BrandsService } from './../../Services/brands.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,10 +11,9 @@ import { BrandGetModel } from 'src/app/Models/BrandGetModel';
 })
 export class BrandsComponent implements OnInit {
   brands: BrandGetModel[] = [];
-  brandName:string;
-  constructor(
-    private brandsService: BrandsService,
-  ) {}
+  brandName: string;
+  filterText: string;
+  constructor(private brandsService: BrandsService) {}
 
   ngOnInit(): void {
     this.getBrands();
@@ -23,7 +23,7 @@ export class BrandsComponent implements OnInit {
       this.brands = data;
     });
   }
-  selectBrand(brand:BrandGetModel) {
-   this.brandName=brand.name;
+  selectBrand(brand: BrandGetModel) {
+    this.brandName = brand.name;
   }
 }

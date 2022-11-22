@@ -17,7 +17,7 @@ export class CarsService {
 
   getCars(brandId): Observable<CarGetModel[]> {
     return this.httpClient.get<CarGetModel[]>(
-      this.apiUrl + '?brandId=' + brandId + '&?state=1'
+      this.apiUrl + '?brandId=' + brandId + '&state=2' +''
     );
   }
   getCarById(id): Observable<CarGetModel> {

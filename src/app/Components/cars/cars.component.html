@@ -1,12 +1,26 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3" *ngFor="let car of cars">
+    <input
+      type="text"
+      class="form-control"
+      id="filter"
+      [(ngModel)]="filterText"
+    />
+    <div class="col-md-3" *ngFor="let car of cars | cars: filterText">
       <div class="card" style="width: 18rem">
         <img src="{{ car.imageUrl }}" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">{{ car.modelName }}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary" routerLink="/car-detail/{{car.id}}">Detaylar</a>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            href="#"
+            class="btn btn-primary"
+            routerLink="/car-detail/{{ car.id }}"
+            >Detaylar</a
+          >
         </div>
       </div>
     </div>
