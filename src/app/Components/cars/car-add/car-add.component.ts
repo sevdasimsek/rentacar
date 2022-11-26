@@ -18,7 +18,6 @@ export class CarAddComponent implements OnInit {
   ) {}
 
   carAddForm: FormGroup;
-  car: CarGetModel[];
   brands: BrandGetModel[];
 
   ngOnInit(): void {
