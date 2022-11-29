@@ -8,7 +8,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CarsPipe implements PipeTransform {
 
   transform(value: CarGetModel[], filterText: string): CarGetModel[] {
-    filterText=filterText?filterText.toLocaleLowerCase():null;
+    filterText!=filterText?filterText.toLocaleLowerCase():null;
     return filterText?value.filter((p:CarGetModel)=> p.modelName.toLocaleLowerCase().indexOf(filterText)!==-1):value
   }
 

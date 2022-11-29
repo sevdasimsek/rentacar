@@ -14,13 +14,13 @@ export class BrandsService {
   getBrands(): Observable<BrandGetModel[]> {
     return this.httpClient.get<BrandGetModel[]>(this.apiUrl);
   }
-  brandGetById(id): Observable<BrandGetModel> {
+  brandGetById(id:number): Observable<BrandGetModel> {
     return this.httpClient.get<BrandGetModel>(this.apiUrl + '/' + id);
   }
-  addBrand(brand): Observable<BrandGetModel[]> {
-    return this.httpClient.post<BrandGetModel[]>(this.apiUrl, brand);
+  addBrand(brand:BrandGetModel){
+    return this.httpClient.post(this.apiUrl, brand);
   }
-  updateBrand(id, brand) {
+  updateBrand(id:number, brand:BrandGetModel) {
     return this.httpClient.put(this.apiUrl + '/' + id, brand);
   }
 }

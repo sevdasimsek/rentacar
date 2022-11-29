@@ -7,7 +7,7 @@ import { filter } from 'rxjs';
 })
 export class BrandPipe implements PipeTransform {
   transform(value: BrandGetModel[], filterText: string): BrandGetModel[] {
-    filterText=filterText?filterText.toLocaleLowerCase():null;
+    filterText!=filterText?filterText.toLocaleLowerCase():null;
     return filterText?value.filter((p:BrandGetModel)=>p.name.toLocaleLowerCase().indexOf(filterText)!==-1):value
   }
 }

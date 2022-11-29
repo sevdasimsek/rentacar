@@ -14,8 +14,8 @@ export class BrandAddComponent implements OnInit {
     private brandsService: BrandsService
   ) {}
 
-  brandAddForm: FormGroup;
-  brand: BrandGetModel[];
+  brandAddForm!: FormGroup;
+  brand!: BrandGetModel;
 
   ngOnInit(): void {
     this.createBrandAddForm();
@@ -31,6 +31,6 @@ export class BrandAddComponent implements OnInit {
     }
     this.brandsService
       .addBrand(this.brand)
-      .subscribe((data) => (this.brand = data));
+      .subscribe();
   }
 }

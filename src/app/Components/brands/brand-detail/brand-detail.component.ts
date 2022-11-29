@@ -15,8 +15,8 @@ export class BrandDetailComponent implements OnInit {
     private brandsService: BrandsService,
     private formBuilder: FormBuilder
   ) {}
-  brand: BrandGetModel;
-  brandUpdateForm: FormGroup;
+  brand!: BrandGetModel;
+  brandUpdateForm!: FormGroup;
   ngOnInit(): void {
     this.getBrandById();
   }
@@ -25,7 +25,7 @@ export class BrandDetailComponent implements OnInit {
       this.getBrands(params['id']);
     });
   }
-  getBrands(id) {
+  getBrands(id:number) {
     this.brandsService
       .brandGetById(id)
       .subscribe((data) => {this.brand = data

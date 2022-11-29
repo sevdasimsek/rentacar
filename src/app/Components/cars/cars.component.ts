@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CarsComponent implements OnInit {
   cars: CarGetModel[] = [];
-  filterText:string;
+  filterText!:string;
   constructor(
     private activatedRoute: ActivatedRoute,
     private carsService: CarsService
@@ -31,7 +31,7 @@ export class CarsComponent implements OnInit {
     });
   }
 
-  getCar(brandId) {
+  getCar(brandId:number) {
     this.carsService
       .getCars(brandId)
       .subscribe((data) => (this.cars = data));

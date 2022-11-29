@@ -17,8 +17,8 @@ export class CarAddComponent implements OnInit {
     private brandsService: BrandsService
   ) {}
 
-  carAddForm: FormGroup;
-  brands: BrandGetModel[];
+  carAddForm!: FormGroup;
+  brands: BrandGetModel[]=[];
 
   ngOnInit(): void {
     this.brandsService.getBrands().subscribe((data) => {

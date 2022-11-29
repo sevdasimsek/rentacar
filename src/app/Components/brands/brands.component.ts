@@ -11,8 +11,8 @@ import { BrandGetModel } from 'src/app/Models/BrandGetModel';
 })
 export class BrandsComponent implements OnInit {
   brands: BrandGetModel[] = [];
-  brandName: string;
-  filterText: string;
+  brandName!: string;
+  filterText!: string;
   constructor(private brandsService: BrandsService) {}
 
   ngOnInit(): void {

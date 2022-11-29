@@ -19,9 +19,9 @@ export class CarDetailComponent implements OnInit {
     private carsService: CarsService
   ) {}
 
-  carUpdateForm: FormGroup;
-  brands: BrandGetModel[];
-  car: CarGetModel;
+  carUpdateForm!: FormGroup;
+  brands!: BrandGetModel[];
+  car!: CarGetModel;
   ngOnInit(): void {
     this.getBrands();
   }
@@ -37,7 +37,7 @@ export class CarDetailComponent implements OnInit {
     });
   }
 
-  getCar(id) {
+  getCar(id:number) {
     this.carsService.getCarById(id).subscribe((data) => {
       this.car = data;
       this.createCarFrom();
